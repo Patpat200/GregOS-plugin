@@ -1,0 +1,27 @@
+# IntelliJ / IDE
+.idea/
+*.iml
+out/
+target/
+
+# Gradle / Maven
+build/
+bin/
+*.class
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Minecraft / plugin runtime (JAMAIS à push)
+plugins/
+world/
+world_nether/
+world_the_end/
+
+# Cache
+*.cache

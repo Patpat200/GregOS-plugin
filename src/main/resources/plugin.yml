@@ -1,0 +1,15 @@
+name: gregos-plugin
+version: '1.1-SNAPSHOT'
+main: me.gregos.gregosPlugin.GregosPlugin
+api-version: '1.21'
+
+commands:
+  ability:
+    description: Use abilities
+    usage: /ability <id>
+  sneakgame:
+    description: Toggle sneak death game
+    usage: /sneakgame <on|off>
+  menu:
+    description: Open plugin menu
+    usage: /menu
