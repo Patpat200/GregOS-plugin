@@ -16,24 +16,29 @@ public class MenuClickListener implements Listener {
 
         int slot = event.getRawSlot();
 
-        // sécurité
         if (slot < 0 || slot > 8) return;
 
         switch (slot) {
 
-            case 0: // Slime
+            case 0:
                 FeatureManager.slimeEnabled = !FeatureManager.slimeEnabled;
+                event.getWhoClicked().openInventory(MainMenu.createMenu());
                 break;
 
-            case 1: // Sneak death
+            case 1:
                 FeatureManager.sneakDeathEnabled = !FeatureManager.sneakDeathEnabled;
+                event.getWhoClicked().openInventory(MainMenu.createMenu());
                 break;
 
-            case 2: // Ability
+            case 2:
                 FeatureManager.abilityEnabled = !FeatureManager.abilityEnabled;
+                event.getWhoClicked().openInventory(MainMenu.createMenu());
+                break;
+
+            case 3:
+                // Ouvre le sous-menu de sélection du bloc piégé
+                TrapBlockMenu.open((org.bukkit.entity.Player) event.getWhoClicked());
                 break;
         }
-
-        event.getWhoClicked().openInventory(MainMenu.createMenu());
     }
 }

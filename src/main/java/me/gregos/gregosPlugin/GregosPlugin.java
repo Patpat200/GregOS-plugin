@@ -5,9 +5,11 @@ import me.gregos.gregosPlugin.commands.SneakGameCommand;
 import me.gregos.gregosPlugin.commands.MenuCommand;
 import me.gregos.gregosPlugin.listeners.SlimeSpawnListener;
 import me.gregos.gregosPlugin.listeners.SneakDeathListener;
+import me.gregos.gregosPlugin.listeners.TrapBlockListener;
 import me.gregos.gregosPlugin.gui.MenuClickListener;
+import me.gregos.gregosPlugin.gui.TrapBlockMenuClickListener;
 import org.bukkit.plugin.java.JavaPlugin;
-// test n2
+
 public final class GregosPlugin extends JavaPlugin {
 
     @Override
@@ -24,5 +26,7 @@ public final class GregosPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new SlimeSpawnListener(), this);
         getServer().getPluginManager().registerEvents(new SneakDeathListener(), this);
         getServer().getPluginManager().registerEvents(new MenuClickListener(), this);
+        getServer().getPluginManager().registerEvents(new TrapBlockMenuClickListener(), this);
+        getServer().getPluginManager().registerEvents(new TrapBlockListener(), this);
     }
 }

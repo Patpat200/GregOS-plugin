@@ -34,6 +34,19 @@ public class MainMenu {
                 FeatureManager.abilityEnabled ? "§7Enabled" : "§cDisabled"
         ));
 
+        // Slot Trap : affiche le bloc actuellement sélectionné ou TNT par défaut
+        Material trapIcon;
+        String trapLore;
+        if (FeatureManager.trapBlockType != null) {
+            trapIcon = FeatureManager.trapBlockType;
+            trapLore = "§cActif : §f" + FeatureManager.trapBlockType.name().replace("_", " ").toLowerCase();
+        } else {
+            trapIcon = Material.TNT;
+            trapLore = "§7Aucun bloc sélectionné";
+        }
+
+        inv.setItem(3, createItem(trapIcon, "§cTrap Blocks", trapLore + "\n§7Clic pour configurer"));
+
         return inv;
     }
 
