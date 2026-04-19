@@ -7,7 +7,7 @@ import me.gregos.gregosPlugin.listeners.SlimeSpawnListener;
 import me.gregos.gregosPlugin.listeners.SneakDeathListener;
 import me.gregos.gregosPlugin.gui.MenuClickListener;
 import org.bukkit.plugin.java.JavaPlugin;
-// test
+// test n2
 public final class GregosPlugin extends JavaPlugin {
 
     @Override
